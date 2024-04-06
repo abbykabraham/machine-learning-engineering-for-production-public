@@ -11,7 +11,7 @@ app = FastAPI(title="Predicting Wine Class with batching")
 
 # Load the pre-trained classifier from a file in the global scope
 # This is done outside of request handling function to load the model only once at the start
-with open("models/wine.pkl", "rb") as file:
+with open("models/wine-95.pkl", "rb") as file:
     clf = pickle.load(file)
 
 # Define a Pydantic model for the request body
